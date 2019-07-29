@@ -1,10 +1,5 @@
 #!/bin/bash
 
-cd "Desktop/Workspace (local)/seacom4"
-alias build='C:\\Python27\\python.exe ~/Desktop/Workspace\ \(local\)/build_s4/buildS4\.py'
-alias release_seacom4='C:\\Python27\\python.exe ~/Desktop/Workspace\ \(local\)/release_s4/releaseS4\.py'
-
-
 export LC_ALL=fr_FR.UTF-8
 export LANG=fr_FR.UTF-8
 export LANGUAGE=fr_FR.UTF-8
