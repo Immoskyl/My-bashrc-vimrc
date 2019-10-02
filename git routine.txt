@@ -1,0 +1,51 @@
+---CASE OF STARTING A FEATURE---
+git pull
+git checkout -b <APFeature#ID>
+git push --set-upstream origin <APFeature#ID>
+
+---CASE OF UPDATING A FEATURE---
+git add *
+git commit -am "commit message"
+git pull
+git push
+
+---CASE OF FINISHING A FEATURE---
+git checkout master
+git pull
+git checkout <APFeature#ID>
+git pull
+git rebase -i master
+git checkout master
+git merge <APFeature#ID>
+git push
+
+---CASE OF MOVING PUSHED COMMITS TO ANOTHER BRANCH---
+git branch newbranch
+git reset --hard first-commit-hash-meant-to-be-moved
+git push --force
+git checkout newbranch
+git push --set-upstream origin 
+
+---CASE OF FIXING A BUG---
+git add [<modified file>], ]
+git commit -am "commit message"
+git pull
+git push
+
+---USEFUL COMMANDS---
+Cancelling unpushed commits:
+git reset --hard origin
+
+See repository state at some commit/tag:
+git checkout commit/stash
+
+Untrack file:
+git rm -cached relative_path_to_file
+
+Logging changes on a file through all commits:
+git log --follow -p -- relative_path_to_file
+for tracking changes, type: /^(\+|\-)
+
+Logging changes on a function through all commits:
+git log -L :fonction_name:relative_path_to_file
+for tracking changes, type: /^(\+|\-)
