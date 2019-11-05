@@ -34,7 +34,7 @@ git push
 
 ---USEFUL COMMANDS---
 Cancelling unpushed commits:
-git reset --hard origin
+git reset --hard
 
 See repository state at some commit/tag:
 git checkout commit/stash
